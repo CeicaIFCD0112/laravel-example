@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
 
-                <form method="POST" action="{{ route('profesores.update', $profesorest->id) }}" class="max-w-sm mx-auto">
+                <form method="POST" action="{{ route('profesores.update', $profesores->id) }}" class="max-w-sm mx-auto">
                     @csrf
                     @method('PUT')
 
@@ -31,6 +31,11 @@
                     <div class="mb-5">
                         <label for="idiomas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Idiomas</label>
                         <input type="text" name="idiomas" id="idiomas" value="{{ old('idiomas', $profesores->idiomas) }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="paises" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Paises</label>
+                        <input type="text" name="paises" id="paises" value="{{ old('paises', $profesores->paises) }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
 
                     <div class="mb-5">
