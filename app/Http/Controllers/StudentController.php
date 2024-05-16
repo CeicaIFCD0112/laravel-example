@@ -31,7 +31,7 @@ class StudentController extends Controller
             'age' => 'required|integer|min:1',
         ]);
 
-         // Crear un nuevo estudiante usando el método `create` del modelo
+        // Crear un nuevo estudiante usando el método `create` del modelo
         Student::create($request->all());
 
         // Redireccionar a la vista de listado de estudiantes
