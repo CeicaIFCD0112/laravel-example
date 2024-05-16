@@ -14,15 +14,15 @@ class CreateProfesorsTable extends Migration
     public function up()
     {
         Schema::create('profesors', function (Blueprint $table) {
-            $table->bigInteger('id')->primary();
-            $table->string('nombre')->notnull();
-            $table->string('apellidos')->notnull();
-            $table->string('estado')->notnull();
-            $table->string('idiomas')->notnull();
-            $table->string('paises')->notnull();
-            $table->string('sublengua')->notnull();
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->id();
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('estado');
+            $table->string('idiomas');
+            $table->string('paises');
+            $table->string('sublengua');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
             $table->timestamps();
         });
     }
