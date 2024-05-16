@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfesoresTable extends Migration
+class CreateProfesorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,16 @@ class CreateProfesoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('profesores', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
-            $table->string('email')->unique();
-            $table->string('especialidad');
+        Schema::create('profesors', function (Blueprint $table) {
+            $table->bigInteger('id')->primary();
+            $table->string('nombre')->notnull();
+            $table->string('apellidos')->notnull();
+            $table->string('estado')->notnull();
+            $table->string('idiomas')->notnull();
+            $table->string('paises')->notnull();
+            $table->string('sublengua')->notnull();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }

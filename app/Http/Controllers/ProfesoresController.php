@@ -34,7 +34,7 @@ class ProfesoresController extends Controller
         ]);
 
         // Crear un nuevo estudiante usando el método `create` del modelo
-        Profesores::create($request->all());
+        Profesor::create($request->all());
 
         // Redireccionar a la vista de listado de estudiantes
         return redirect()->route('Profesores.index');
@@ -73,9 +73,9 @@ class ProfesoresController extends Controller
 
     public function destroy(string $id)
     {
-        $student = Profesor::findOrFail($id);
+        $Profesor = Profesor::findOrFail($id);
 
-        $student->delete();
+        $profesor->delete();
 
         return redirect()->route('Profesores.index');
     }
